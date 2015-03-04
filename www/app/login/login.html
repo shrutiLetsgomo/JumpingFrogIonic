@@ -1,13 +1,19 @@
 <ion-view>
 	<ion-content id="loginForm">
-		 <div class="jumpingfrog_title">JumpingFrog</div>
-		 <label class="item item-input">
-	 		<input placeholder="User Name" type="text">
-		 </label>
-	     <label class="item item-input">
-	  		<input placeholder="Password" type="password">
-		</label>
-		<button class="button button-assertive login_btn" ng-click="login()">Sign In</button>
-		<div class="font14 semi_bold forgot_pswd_text "><span class="forgot_password_h padding_5">Forgot your password?</span></div>
+		<div class="jumpingfrog_title">JumpingFrog</div>
+		<div class="list list-inset">
+			<label class="item item-input">
+	 			<input placeholder="User Name" type="text">
+		 	</label>
+		 	<label class="item item-input">
+	  			<input placeholder="Password" type="password">
+			</label>
+		</div>
+            <button class="button button-block login_btn" ng-click="signIn(user)">
+              Login
+            </button>
+            <p class="text-center forgot_pswd_text">
+              <label>Forgot Password ?</label>
+            </p>
      </ion-content>
 </ion-view>
