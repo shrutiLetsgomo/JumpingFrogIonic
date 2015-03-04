@@ -1,0 +1,41 @@
+#loginForm {
+  max-width: 500px;
+  left: 50%;
+  margin-left: -250px;
+  padding: 12px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -161px;
+}
+
+#loginForm .item-input {
+  margin: 10px;
+}
+
+.jumpingfrog_title {
+  margin-bottom: 27px;
+  font: normal 300% /120% "OpenSans_SemiboldItalic",helvetica, arial, sans-serif;
+  text-align: center;
+  color: #e84e40;
+  text-shadow: 0 2px 2px #ddd;
+}
+
+.login_btn {
+  width: 76%;
+  margin: 0 12%;
+  border: 0;
+}
+
+.forgot_pswd_text{
+  padding: 5px;
+  text-align: center;
+  color: #68142b;
+  width: 60%;
+  margin: 10px 20%;
+  border-bottom: 1px solid #68142b;
+}
+
+.font14 {
+  font: normal 140% /130% "OpenSans",helvetica, arial, sans-serif;
+}
