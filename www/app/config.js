@@ -1,12 +1,28 @@
 JumpingFrogApp.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/');
-	$stateProvider.state('login',{
+	$stateProvider
+	.state('login',{
 		url:'/',
 		templateUrl:'app/login/login.html',
 		controller:'loginCtrl'
 	})
-	$stateProvider.state('billboard',{
-		url:'billboard',
-		templateUrl:'app/billboard/billboard.html'
+
+	.state('menu',{
+		url:'/menu',
+		abstract: true,
+		templateUrl:'app/menu/menu.html',
+		controller:'MenuCtrl'
 	})
+
+	.state('menu.billboard',{
+		url:'/billboard',
+		views: {
+			'menuContent' : {
+				templateUrl:'app/billboard/billboard.html',
+				controller:'billboardCtrl'
+			}
+		}
+	})
+
+	//$urlRouterProvider.otherwise('/billboard');
 });

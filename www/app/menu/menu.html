@@ -1,0 +1,61 @@
+<ion-side-menus>
+  <!-- Center content -->
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable bar-assertive" align-title="left">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+        <button class="button button-icon ion-flag">
+        </button>
+        <button class="button button-icon ion-funnel">
+        </button>
+        <button class="button button-icon ion-plus-circled">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <!-- Left menu -->
+  <ion-side-menu side="left">
+  	<ion-content>
+  		<ion-list>
+        <ion-item nav-clear menu-close>
+        <img src="{{user.imageUrl}}">
+        </ion-item>
+        <ion-item nav-clear menu-close>
+        {{user.name}}
+        </ion-item>
+  			<ion-item nav-clear menu-close ui-sref="menu.billboard">
+  			Billboard
+  			</ion-item>
+  			<ion-item nav-clear menu-close ng-click="#/assignments">
+  			Assignments
+  			</ion-item>
+  			<ion-item nav-clear menu-close ng-click="#/events">
+  			Events
+  			</ion-item>
+  			<ion-item nav-clear menu-close ng-click="#/groups">
+  			Groups
+  			</ion-item>
+  			<ion-item nav-clear menu-close ng-click="#/media">
+  			Media
+  			</ion-item>
+  			<ion-item nav-clear menu-close ng-click="#/remarks">
+  			Remarks
+  			</ion-item>
+  			<ion-item nav-clear menu-close ng-click="#/notifications">
+  			Notifications
+  			</ion-item>
+  			<ion-item nav-clear menu-close ng-click="#/schedule">
+  			Schedule
+  			</ion-item>
+  		</ion-list>
+  	</ion-content>
+  </ion-side-menu>
+</ion-side-menus>

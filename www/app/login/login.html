@@ -3,13 +3,13 @@
 		<div class="jumpingfrog_title">JumpingFrog</div>
 		<div class="list list-inset">
 			<label class="item item-input">
-	 			<input placeholder="User Name" type="text">
+	 			<input placeholder="User Name" type="text" ng-model="user.userName">
 		 	</label>
 		 	<label class="item item-input">
-	  			<input placeholder="Password" type="password">
+	  			<input placeholder="Password" type="password" ng-model="user.password">
 			</label>
 		</div>
-            <button class="button button-block login_btn" ng-click="signIn(user)">
+            <button class="button button-block login_btn" ng-click="login(user)">
               Login
             </button>
             <p class="text-center forgot_pswd_text">

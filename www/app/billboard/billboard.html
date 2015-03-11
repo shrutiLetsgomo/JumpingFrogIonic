@@ -1,5 +1,32 @@
-<ion-view title="billboard">
+<ion-view title="Billboard">
 	<ion-content>
-	<h1>BillBoard</h1>
+	<div  ng-repeat="post in posts" class="list card">
+		<div class="item item-avatar">
+			<img class="avatar" src="{{post.fromUser.photo}}">
+			<h2>{{post.type}}</h2>
+			<h2>{{post.fromUser.fullName}}</h2>
+			<p>{{setDateTime(post.created_on)}}</p>
+		</div>
+		<div class="item item-body">
+			<p>
+	      		{{post.description}}
+	    	</p>
+		</div>
+
+	<div class="item tabs tab-secondary">
+		<a class="tab-item" href="#">
+			<i class="icon ion-happy"></i>
+			[{{(post.postLinkCounts[0]).likeCount}}]
+		</a>
+				<a class="tab-item" href="#">
+			<i class="icon ion-edit"></i>
+			[0]
+		</a>
+				<a class="tab-item" href="#">
+			<i class="icon ion-sad"></i>
+			[{{(post.postLinkCounts[1]).likeCount}}]
+		</a>
+	</div>
+	</div>
 	</ion-content>
 </ion-view>
