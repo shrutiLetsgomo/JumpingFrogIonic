@@ -38,6 +38,12 @@ JumpingFrogApp.factory('utilitiesService', function()
 					timeDetails.time = hours+":"+mins+":"+seconds+" "+periodValue;
 				}
 			return timeDetails;
+		},
+		extend : function(firstObj, secondObj){
+				var finalobj={};
+				for(var _obj in firstObj) finalobj[_obj ]=firstObj[_obj];
+				for(var _obj in secondObj) finalobj[_obj ]=secondObj[_obj];
+			return finalobj;
 		}
 	}
 })

@@ -8,10 +8,15 @@ JumpingFrogApp.service('billboardService', function($http)
 			var type = type || 'all';
 			var url = "http://14.141.55.134/jumpingfrog/api/post?from="+from+"&to="+to+"&type="+type;
 			console.log("welcome ..");
+			//return APIService.doApiCall(url,'GET');
 			return $http.get(url,
 				{	
 					headers : {'X-JF-AUTH' : userDetails.token},
 				});
+		},
+		updatePostLike : function()
+		{
+			
 		}
 	}
 })
