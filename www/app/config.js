@@ -19,7 +19,12 @@ JumpingFrogApp.config(function($stateProvider, $urlRouterProvider) {
 		views: {
 			'menuContent' : {
 				templateUrl:'app/billboard/billboard.html',
-				controller:'billboardCtrl'
+				controller:'billboardCtrl',
+				resolve: {
+					response: function(billboardService) {
+						return billboardService.getPosts();
+					}
+				}
 			}
 		}
 	})
